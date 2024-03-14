@@ -1,0 +1,467 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="841,6485" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="851,6420" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="789,6309" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="C:\Users\jashw\Desktop\Book1.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Tickets" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,6017" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd2:DataTable" Name="ticket" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="False" sap:VirtualizedContainerService.HintSize="693,5906" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Tickets.Sheet(&quot;Sheet1&quot;).Range(&quot;A2:I4&quot;)]" SaveAfterEachRow="False">
+              <ueab:ExcelForEachRowX.Body>
+                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="Movie" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="659,5724" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="BOOK MY SHOW" sap:VirtualizedContainerService.HintSize="597,5613" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="563,5396" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="ui:UiElement" Name="TIME" />
+                              <Variable x:TypeArguments="ui:UiElement" Name="PAY" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search for'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Text="[Movie.ByIndex(1)]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/explore/home/chennai" CvElementArea="203, 168, 553, 40" CvTextArea="243, 180, 337, 17" CvTextArgument="Search for Movies, Events, Plays, Sports and Activities" CvType="InputBox" DesignTimeRectangle="245, 180, 497, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Search for'" FullSelectorArgument="&lt;webctrl id='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='4' tag='SPAN' type='' class='sc-fcdeBU cNeUMt' aaname='Search for Movies, Events, Plays, Sports and Activities' check:innerText='Search for Movies, Events, Plays, Sports and Activities' /&gt;" Guid="d558ecda-0e69-4a6b-ba5d-f92e621dfb00" ImageBase64="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" InformativeScreenshot="ce3065fae17a830cec8fd35beda46acc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Movie Tickets, Plays, Sports, Events &amp;amp; Cinemas near Chennai - BookMyShow' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CvType="Icon" DesignTimeRectangle="218, 181, 13, 13" ElementType="Icon" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl parentid='3' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='3' tag='svg' type='' class='' aaname='' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADhSURBVDhPtZKhDoMwEED310gkSCRIJEgkSCwSi8Qisbe8rldCd2HZwl5CStrru+u1D7mB/0i2bZO6rqUoCkmSRKqqkmEY/KrNSTJNk6Rp6r6maaTveydEhpQEFkFCAJvLspR93/3si3VdJcsyJ7IIEjIjiQXKsiyuonEc/cxBkJAF0RVaaUyQkIUeXIHAOlKQEEATryCRFRMkVEEQTbTQdXoTEyRAqXmevwWq4OPtANfMsdhAE3lo/KuAsW1bH31wkijzPIeHxqiPjNuzRKbkCkv0tQS6rnPHVX6SxNwgEXkCoSgvkf46mkoAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'SVG'" sap:VirtualizedContainerService.HintSize="501,225" sap2010:WorkflowViewState.IdRef="ClickOCRText_5" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="[Movie.ByIndex(1)]">
+                              <ui:ClickOCRText.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickOCRText.CursorPosition>
+                              <ui:ClickOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_5" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:ClickOCRText.OCREngine>
+                              <ui:ClickOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60b900b7-5de3-4ad2-8298-72dc9201f0a2" InformativeScreenshot="d2f7364c5ef402eedfc139ce71f893ba" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div' parentid='super-container' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickOCRText.Target>
+                            </ui:ClickOCRText>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Book tickets'" sap:VirtualizedContainerService.HintSize="501,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/chennai/movies/ponniyin-selvan-part-2/ET00348725" CvElementArea="363, 631, 219, 55" CvTextArea="425, 650, 93, 15" CvTextArgument="Book tickets" CvType="Button" DesignTimeRectangle="365, 634, 214, 49" DesignTimeScaleFactor="1" FriendlyName="'Book tickets'" FullSelectorArgument="&lt;webctrl parentid='page-cta-container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page-cta-container' tag='DIV' type='' class='styles__CtaText-sc-1vmod7e-2 bBLrVT' aaname='' check:innerText='Book tickets' /&gt;" Guid="5047839d-8e5e-47ec-be92-5366dbdf06d0" ImageBase64="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" InformativeScreenshot="4aa71ed3364993155e1bdcb7b692d89f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 (2023) - Movie | Reviews, Cast &amp;amp; Release Date in chennai- BookMyShow' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CvElementArea="363, 631, 219, 55" CvTextArea="425, 650, 93, 15" CvTextArgument="Book tickets" CvType="Button" DesignTimeRectangle="426, 649, 91, 19" ElementType="Text" FriendlyName="'Book tickets'" FullSelectorArgument="&lt;webctrl parentid='page-cta-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='page-cta-container' tag='SPAN' type='' class='' aaname='Book tickets' check:innerText='Book tickets' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAXCAYAAABtR5P0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASBSURBVGhD7Vgxa+swEH4/rv8ia6F7lnR6UMhbsmRphhLo0MVLMhVKoBA6ZEmHEgiEQsngpRlKoFAe1I7te3fSnSw5curXl4cXH3zQSCfp7rvTndwfnyen0KAeNOTXiIb8GtGQXyMa8muES37vDpLp3MXtCOJ2x1l0TCQhoPyGdOCfr4zBE6RhCGnQ8897sFv8psMhnfjn/zdc8ievyhifZC8PENm6R8J3yI8nayT6FZKhNcZEwsu9o3sIxyF/hD68QrqaQeydL4ef/M0TxN0rhd3tM2SRHk5vj38DvkO+l7QW2jp5gPjMGvsCxyF/Bilt8vEMO+98OfzkhzNHSYzMFoEzHlGZWmHUKfKPJY63A0gWWA5IZzGHXdcN4B75rRvYqZI3g13/l6P7eXKt5tIw1vasqCwG+kZKyRy4ZSfqP2BWso2zO8fGffL7GEAut8NLo1fmZzR4QN01ZLRJhHO4bteTvToQB2jrC61D/6d4dkvmNCqQ34HkRQ9n09yxCHXVoY68I4kWuQO8NTyTS4zO9o2OS34ffwux954yx1lmi2Qc254nSAfJfVdjjiBJybnezyWf9DnJ6OYzUV4/eQ/Rt8XstZK52FQOta6t9yX4yY+QRIoyIvvQQ7ZBn+25iXaiMhmjPGUjozVfvxGk6lAkdnih1kVDCcabMSIn3yIeg3+ov+xnLKJIfm+5Z6MhdzUq7GMFioJ50M83pSZ7eMtO+0mv2z4zZxQM9u3xiteVNlyKFoNHss3SGBXN2ACnDPUg2dAoZ3HA13Ezt3TQYTFiqm+IkJ+FnCm28yWoQn78qMl0bGzdcenQt8oEg5KM/uCMFn2/n0WyfeRL0DDJhv3SRKpQdi7MFdrPGGstjTOxaryYiYyiQ5r8XLIKr5Uq5JfZaEN0jGyXzotlb94RDJTS8zVcvCHopyQuSbYNIQnyrCdUarimduMBZJwYJdkrECIPkW/WLm6cNfCBxqoSRz3h8FvdS2wJ+UUbbRhyscxmW/2nba/ZI3zSTdgBNlCl5yOfcYYN/Ja+P3B/tRP6Ns7tqUS+ZKspIWNmzK7NdKVVjed63uWa6xiFdV2VJjQi0GN5zcffEuTC9S+iCvnGF/w+MTo9rMVUStluJ0DnSKL0KHk0iJ/Y75zS0b22Xi4e8odEOJa3iZXp0ius4H7ZcNMNZ4eTkQGk0ojDJWYBHrblWm7KBvYAaaCbtcqWVOq6db0d8q2mSIEuq5XyQZVtniGZcAYWyTfJgGSvKHOXxmbxoxhE87IhIhW5lp/sQ7LQOvlHJ5NPPszwHPLDNHvkcTKCeIg6wo/1YixpuK5kWBLSsVuvPs/vMTB6QxEyyHnL4ps9EcJZVOO23tou+QTL4VnhTIHJUhTJuCL5hC6+8XkvLRiIx5EJ6v4NshIGk0jpneGrregnBn1nbqb1UkIxgRznH6da8OyF+3x2yf8OsK7F3UuIDr1QWj31tRz9xdfn17iAqOqe7Us8v/zVUQlf+UBn/NzvVdE5/afAf/a/k9/g22jIrxEN+TWiIb9GNOTXhlP4AxB75PXu0KOVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501,464" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                              <ui:IfElseIf.ConditionBlocks>
+                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                  <ui:IfElseIfBlock BlockType="If" Condition="[Movie.ByIndex(3)]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2D'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/chennai/movies/ponniyin-selvan-part-2/ET00348725" DesignTimeRectangle="550, 406, 17, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'2D'" FullSelectorArgument="&lt;webctrl aaname='2D' parentid='super-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='2D' parentid='super-container' tag='SPAN' type='' class='' check:innerText='2D' /&gt;" Guid="fa2c632a-9271-48e2-89c9-fd5ca91cf3aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFcSURBVEhL7ZK9S8NQFMX9p8TVXUREBBFF/FpEWiyuUnARh+JgO4iCdVHBRd3cxEXUQXQRoa1to9GkH0ZoE9vEHN99fUmjpBa0neyBO+Tkvt+7993bhTaoA2292g+1jXcUYjtI9Q4j0dMPaWIBlfuk+Atoe0dIdPe5kRmcwdvhCWCaIqOmOtSykF/bhBxYgvms8guKW7uQxgKwihpPIagcDMPWDdiVKozbOzxOLyIX2fgCdqF0MDs6D/3yWjgsT1YgjQdZtSn+7YU6qqYlXrF+dSOcJm9KMIISnOQHpQ6VcAT59W1h/ARl7airMRSicfbYNrd8oUzqSpSHI38oA77GDyCHlvFRKgvzL1BWlbZ/zAdkKjlh1vS79hmwdHoOaTIE8+lFmHX5DupBQnpgqvGgymcXyAzNutP+Li+UVopA2ZG5xitFiXTAu9xOOO9FUK/ffPlbqA609frXUOATK7KEEVNV3gMAAAAASUVORK5CYII=" InformativeScreenshot="6627289a908448777fe4339ea7376d01.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 (2023) - Movie | Reviews, Cast &amp;amp; Release Date in chennai- BookMyShow' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target CvTextArgument="TAMIL" CvType="Text" DesignTimeRectangle="527, 358, 42, 17" ElementType="Text" FriendlyName="'Tamil'" FullSelectorArgument="&lt;webctrl aaname='Tamil' parentid='super-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tamil' parentid='super-container' tag='SPAN' type='' class='' check:innerText='TAMIL' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHBSURBVFhH7VRZS0JREO7X6ps+GC7XFE1bKIn2eimMIiMigjZ6ibDNCkNasZAMxaUEyxbyaeI7MJd7r0o9xAnhPnwPM3NmznfOfDMdtY86tSNM4rJhEpcNlfjk1DRZLJamcLnclCuU1aTUxTXZbDbaP0yoPsbK6hpZrVba3Ys3xIDY0rKoeXB0ImzURf1Wdis0/XFc3tvXT+XKS0MMWFiMkd1up7HxCarWPnUx5ILYwGCEKtU3Xaz0XKVQKPw/xPPFJwoEgrS5tUNdPh+l7x90ceQGg92kKF7RGW0scZokp9NFbrdHPnHIIxTuoUKpQsMjo7S+sa2LIxedANAZ9qMz8EXn5kVtqcT5cugUNnSMR0ACfAa5kcgQxQ+Oyef3iw7Bf3uXET99lkzJJw5ZQAJXN2lhZ7I5UrxeOk9dqmc4N5sriEfxkMIP3eMh0olDFrxptJiZjdLr+1dDLs6DLMjwI34i+ufEeSMYNY2B8ygKPeaLwtbmckegdZaNdOLYECho3CIYUmwXrSQ4F11AN9AVngupxJlAs70N4EcxkNjbxlx0xOHoFMMJ+7fEjXKEDzGcAZoSbweYxGXDJC4bbUq8Tt/6qMq/Bf7RMwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                </sc:BindingList>
+                              </ui:IfElseIf.ConditionBlocks>
+                            </ui:IfElseIf>
+                            <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'DIV'" sap:VirtualizedContainerService.HintSize="501,225" sap2010:WorkflowViewState.IdRef="ClickOCRText_8" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="[Movie.ByIndex(5)]">
+                              <ui:ClickOCRText.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickOCRText.CursorPosition>
+                              <ui:ClickOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_8" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:ClickOCRText.OCREngine>
+                              <ui:ClickOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="754848ed-2ae3-434d-8399-dc4a9826d3a5" InformativeScreenshot="90db18ed94b52cf0d2f3fe7cc474980f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickOCRText.Target>
+                            </ui:ClickOCRText>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SPAN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Text="[Movie.ByIndex(4)]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/buytickets/ponniyin-selvan-part-2-chennai/movie-chen-ET00348725-MT/20230508" DesignTimeRectangle="1304, 396, 50, 50" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl class='icon-search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='icon-search' tag='SPAN' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="87578de1-5100-4e4c-987c-4d3da950c4da" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVGhD7dYvb4RAEIbxflosFiwWLFgsWLBYsFiwaNKkAj3tu2HF/eXEzHHTzJOQSwCxvwws90V/rd8/+PlXGUxbBtOWwbRlMG0ZTFsG05bBtGUwbRlMW6KwdV1pGAZq25bmeaZt2/Yr8onAAMiyjIIguDjCMHTId8QOAwoAQJqmoWmaaFkWGseRkiRx56uq2u+Wix2WpqlbPDD3yvPcXQdUMlYY3qmjiWCiURRRHMf7GZlYYX3fOxgev2f5qT2aKkesMLxTrywYE1UFw6Sw4KP3x7+HkrHC/I6I3e9RHi+9M7LCUNd1buFFUdx8kIHyn4Lra9yxw1BZlm7xQABY1/XNBxv3SCYCQ5iO3/1w4PHE5oJJebgkTgx2lDTuNBiSxJ0KQx7H/RfrdBjCTsq9S34ETCKDactg2jKYtgymLYNpy2DaMpi2DKYtg+mK6BfPa+1umBDSuwAAAABJRU5ErkJggg==" InformativeScreenshot="5fe94d03bef3a149a946525bc4086586.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 2D Movie, Showtimes in Chennai &amp;amp; Online Ticket Booking' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <ui:FindOCRText DisplayName="Find OCR Text Position 'LI'" Element="[TIME]" sap:VirtualizedContainerService.HintSize="501,265" sap2010:WorkflowViewState.IdRef="FindOCRText_1" Occurrence="1" Text="[Movie.ByIndex(6)]" Version="V1">
+                              <ui:FindOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_10" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:FindOCRText.OCREngine>
+                              <ui:FindOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="965945ac-25a0-45e7-b6be-73c919d12787" InformativeScreenshot="b196ca640f80118421acffd67a6bb578" Selector="&lt;webctrl class='list' parentid='venuelist' tag='LI' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:FindOCRText.Target>
+                            </ui:FindOCRText>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="501,137" sap2010:WorkflowViewState.IdRef="NClick_14" InUiElement="[TIME]" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="501,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/buytickets/ponniyin-selvan-part-2-chennai/movie-chen-ET00348725-MT/20230508" CvElementArea="571, 618, 224, 44" CvTextArea="670, 631, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="572, 620, 222, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'OK'" FullSelectorArgument="&lt;webctrl id='btnPopupOK' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnPopupOK' tag='DIV' type='' class='bar-btn _primary _centered' aaname='OK' check:innerText='OK' /&gt;" Guid="a6c01dea-f88e-4411-bbf1-fce8d33371b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOIAAAAsCAYAAAB48mQTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARtSURBVHhe7d3Ji9RoHMbx/HEqA4MLzH0EF8QVB72IeBFttzmoMydpEexxLupBwYOCV1HBrdFGXEBwRKuqq7q6UqlU1t+8z9u+Mal+VSxT3Qk8DR+bSiW5fXnfzhsTJ0kSgTiOJYoiCcNQgiCQ4XAovu/LYDDQPM/T+v0+EX2DacW0g47QE7pCX+gMvZn20jQV51sB4qSu62q9Xk8WFxcLut0uESmjbaAX0w46+l6QTj7CfIDeo+finZwWb89x8Tftk+GabUT0A9AN+vFOqY5UT/kg8zHqEPMRYjh12x3x/r4iw3XbrScnojGonvqqK3ehqzvLx4hR0clH2J99Kf7vh+wnIqKfNth6RHeWjxGjooM5K4ZLPZfFSGg5mIjKo0dG1Ru6Q38YFR1Uiblr/+GsDNdyOko0caozjIrozoyKjhkN8Qel9SAiKh16y4+KDqrE5dbBzqPWA4iofN6+Kd2dGRUdVIl1EH/DHusBRFQ+/7c/dHdmVNQhLiwsWHcmoslBd1mIuAOAIRKtPHSH/rCU4WCe2ul0rDsS0eSgO4ZItMrQnblgo0Nst9vWHYloctAdQ6yJYO+UJI9eiASh6B/1O517K+GBM4X90ncfRFodCQ/++WX7+t1Lx+IO/zv3CvvT6mOINREeOivS7Oj4kgezEl++qX/rKNV2fG/2tYWI+HSEKkZEabZTNRRCxFoGQ6ym5N5TkTCS+N9bhe34jO343mwbDTG+ovYZBoywwtAd+mOIFRbsOibpx5ak/zUk2Hy4+J36jO0YFYP9p/S2fIjR2RkR15P07XsJthwpHEvVwRBrIDw5LeL5kjyes36P7fge++GzCTE6c2lpOjsydaXqYYg1MFaInUVJ338SSVJJ7j5YdgxVC0OsgbFCxI8aCdPnb0T8QKLp68uOo+pgiDUwVoj9gUTnZvTfidJoc3pacQyxBnARRo9uY1yswWcsdfCqabUxxJr47vLF/WfZttEQITv+6u1sG1UHQ6wJvaD/aX7sBX3clYMlECxlYEnDbKdqYIg18lO3uCm4YIMpKtcUq4chElUAQySqgEKIvOmbaHWgO/7vC6JVxhCJKmBZiHxUBtHKKzwqAw+vYYhEKw/dZQ+PMo9TxANPbTsTUfnQW+FxiuYBw96B09YDiKh86A3dZQ8YxvwUaxnuX/9YDyCi8qE3s4aoQ8SwiOGxO/dKhr/ssB5EROXxf92lenudTUv1S2hQI4ZH1Nm7eM16IBGVpzdzY2kW+nlaql/LZl5Uqi/atNvibeWNwUSTgr7QGXpDd9mLSvOv7saaRrfZkt75Gf3yfduJiGgMqqfeucu6L3SWHw31q7tRI6rEXNXEiKs53ftPxD1xQfq7j8lg4177yYnoq9AN+nGnLuie0JWJ0PxtiP6iKBIH/4zGqC/eqDksFhxxG878/Ly0Wi1pNpuZRqNBRDn5PtALukE/6Ehfg1Fd2SKM43gpRAyNJkYMl5i75oNEyYATmjiJaDnTiGkmH6BZqjARojv0lySJ/A9wpcs4FXRghAAAAABJRU5ErkJggg==" InformativeScreenshot="794f8a87ff35b41d7732ee5cce325d85.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 2D Movie, Showtimes in Chennai &amp;amp; Online Ticket Booking' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'UL  popQty'" sap:VirtualizedContainerService.HintSize="501,225" sap2010:WorkflowViewState.IdRef="ClickOCRText_4" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="[Movie.ByIndex(7)]">
+                              <ui:ClickOCRText.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickOCRText.CursorPosition>
+                              <ui:ClickOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:ClickOCRText.OCREngine>
+                              <ui:ClickOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2ce9a22f-0307-43f5-b969-4ae1aa5463d8" InformativeScreenshot="2862d25e831aa273de77fb8d8850d23c" Selector="&lt;webctrl id='popQty' tag='UL' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickOCRText.Target>
+                            </ui:ClickOCRText>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select Seats'" sap:VirtualizedContainerService.HintSize="501,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/buytickets/ponniyin-selvan-part-2-chennai/movie-chen-ET00348725-MT/20230508#!seatlayout" CvElementArea="489, 615, 404, 43" CvTextArea="645, 628, 91, 15" CvTextArgument="Select Seats" CvType="Button" DesignTimeRectangle="491, 616, 400, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Select Seats'" FullSelectorArgument="&lt;webctrl id='proceed-Qty' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='proceed-Qty' tag='DIV' type='' class='bar-btn _primary _full-width _centered' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Select Seats &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='Select Seats' /&gt;" Guid="cca9a69b-8a80-4752-b3e0-2bde8d641077" ImageBase64="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" InformativeScreenshot="ea463edbd38515edef1f9253a94189d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 2D Movie, Showtimes in Chennai &amp;amp; Online Ticket Booking' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="501,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                            <ui:FindOCRText DisplayName="Find OCR Text Position 'DIV'" Element="[PAY]" sap:VirtualizedContainerService.HintSize="501,265" sap2010:WorkflowViewState.IdRef="FindOCRText_2" Occurrence="1" Text="Pay Rs." Version="V1">
+                              <ui:FindOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_11" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:FindOCRText.OCREngine>
+                              <ui:FindOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4be31136-4b32-42ff-a36a-5a42c214a066" InformativeScreenshot="eab708174fa03c1e6979a6b84d361646" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' idx='6' parentid='cpnleft' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:FindOCRText.Target>
+                            </ui:FindOCRText>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="501,137" sap2010:WorkflowViewState.IdRef="NClick_15" InUiElement="[PAY]" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="501,237" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                              <uix:NMouseScroll.SearchedElement>
+                                <uix:SearchedElement>
+                                  <uix:SearchedElement.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/buytickets/ponniyin-selvan-part-2-chennai/movie-chen-ET00348725-MT/20230508#!seatlayout" CvTextArgument="By proceeding, I express my consent to complete this transaction." CvType="Text" DesignTimeRectangle="975, 377, 362, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'By proceeding,'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='bksmile' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='bksmile' tag='DIV' class='' aaname='                         &amp;#x9;&amp;#x9;By proceeding, I express my consent to complete this transaction.                         &amp;#x9;' check:innerText='By proceeding, I express my consent to complete this transaction.' /&gt;" Guid="562a2364-cac6-4474-bd97-3103ab5f70ef" ImageBase64="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" InformativeScreenshot="e2554694066f4250aef73b72f31e9264.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Ponniyin Selvan - Part 2 2D Movie, Showtimes in Chennai &amp;amp; Online Ticket Booking' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:SearchedElement.Target>
+                                  <uix:SearchedElement.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:SearchedElement.Timeout>
+                                </uix:SearchedElement>
+                              </uix:NMouseScroll.SearchedElement>
+                            </uix:NMouseScroll>
+                            <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'DIV  prePay'" sap:VirtualizedContainerService.HintSize="501,225" sap2010:WorkflowViewState.IdRef="ClickOCRText_7" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="TOTAL: Rs.">
+                              <ui:ClickOCRText.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickOCRText.CursorPosition>
+                              <ui:ClickOCRText.OCREngine>
+                                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                  <ActivityFunc.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                  </ActivityFunc.Argument>
+                                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_7" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Timeout="100000" />
+                                </ActivityFunc>
+                              </ui:ClickOCRText.OCREngine>
+                              <ui:ClickOCRText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5fbf5e0b-d5a7-496f-896a-d58a822ee8e8" InformativeScreenshot="fd4dc3274692785e1f937e74ba7f4e5e" Selector="&lt;webctrl id='prePay' tag='DIV' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickOCRText.Target>
+                            </ui:ClickOCRText>
+                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501,464" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                              <ui:IfElseIf.ConditionBlocks>
+                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                  <ui:IfElseIfBlock BlockType="If" Condition="[Movie.ByIndex(8)]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/buytickets/evil-dead-rise-chennai/movie-chen-ET00349309-MT/20230508#!seatlayout" CvElementArea="694, 485, 226, 44" CvTextArea="779, 498, 54, 19" CvTextArgument="Accept" CvType="Button" DesignTimeRectangle="696, 487, 222, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Accept'" FullSelectorArgument="&lt;webctrl id='btnAduPopupAccept' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btnAduPopupAccept' tag='DIV' type='' class='bar-btn _primary' aaname='Accept' check:innerText='Accept' /&gt;" Guid="57baf3eb-ee87-4b93-a5f1-99c00ae47d03" ImageBase64="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" InformativeScreenshot="0ee6d978f5f0855129670121758f097a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Evil Dead Rise 2D Movie, Showtimes in Chennai &amp;amp; Online Ticket Booking' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                </sc:BindingList>
+                              </ui:IfElseIf.ConditionBlocks>
+                            </ui:IfElseIf>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'UPI'" sap:VirtualizedContainerService.HintSize="501,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/payment/?cid=INTO&amp;cc=INOX&amp;sid=42171&amp;ety=MT&amp;etk=Y&amp;mtk=Y&amp;ec=ET00348725&amp;reload=true" CvElementArea="25, 625, 274, 45" CvTextArea="45, 640, 19, 12" CvTextArgument="UPI" CvType="Button" DesignTimeRectangle="26, 625, 274, 45" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'UPI'" FullSelectorArgument="&lt;webctrl id='dTUPI' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dTUPI' tag='LI' type='' class='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; UPI &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' check:innerText='UPI' /&gt;" Guid="a0a652e0-8d91-4274-a5c8-612e85605c14" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARYAAAAxCAYAAAAfk4Z1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVHhe7dixaxNhHMdh/+9Sh4MKOoTSDg4OBQMOgkIHxUFBcC2lQwdLBykZWshgSIaMP5Omaqp1KPmm3MXn4IF7f3e3fnjvfTQej+vb4LKm0ynASkajUc2vX2GZDwBWdSssd9UH4D6EBYgTFiBOWIA4YQHihAWIExYgTliAOGEB4oQFiBMWIE5YgDhhAeKEBYgTFiBOWIA4YQHi1h+WwWH1tg/q5F+z6/umtpY8OTis8++Ld0/6TfU+Xfz+Fmi9loRl6fnkqr6+3a2tF59rOFsLC3RP+8Lyx0xYoHtaGJabHcvzD3Ys0FGtPGNp9l/X6XDxrrBA97TzV2iJsED3rD8sl+9qbxaOo+XZLCbPtl/W6c29sMBmWX9Yphf1cbepvfdnNZmvJ1d11H9azavjxVpYYOM8QFhmhsf1Zn+nHl+foexUr/+lBj+fCQtsnIcJC/BfERYgTliAOGEB4oQFiBMWIE5YgDhhAeKEBYgTFiBOWIA4YQHihAWIExYgTliAOGEB4oQFiBMWIO6vsMwHAKu6FZa76gNwH8ICxC3CUvUD6yqG3wnSZbMAAAAASUVORK5CYII=" InformativeScreenshot="4a4ea59c64dd710b58065ce35e00d23f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BookMyShow - Secure Payment' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Google Pay'" sap:VirtualizedContainerService.HintSize="501,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/payment/?cid=INTO&amp;cc=INOX&amp;sid=42171&amp;ety=MT&amp;etk=Y&amp;mtk=Y&amp;ec=ET00348725&amp;reload=true" CvTextArgument="G Pay Google Pay" CvType="Text" DesignTimeRectangle="321, 454, 284, 63" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Google Pay'" FullSelectorArgument="&lt;webctrl parentid='dUpiListing' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dUpiListing' tag='LABEL' type='' class='' aaname='' check:innerText='Google Pay' /&gt;" Guid="4bc7104d-5429-4e8e-8238-d8e7805bfc91" ImageBase64="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" InformativeScreenshot="f201a9c1f677a1b14c0216221137dbd7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BookMyShow - Secure Payment' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CvTextArgument="G Pay Google Pay" CvType="Text" DesignTimeRectangle="411, 478, 70, 15" ElementType="Text" FriendlyName="'Google Pay'" FullSelectorArgument="&lt;webctrl class='upi-name-list' parentid='dUpiListing' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='upi-name-list' parentid='dUpiListing' tag='SPAN' type='' aaname='Google Pay' check:innerText='Google Pay' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAATCAYAAAA3UZtOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVFhH7VZNi6swFO3/381GCARcCEIhC0FwIQhCF666KAgFFzIDLgJCwUVBEHrm5sP60XnFOvQxCw+kGJPcnntycuMOGxZhE2ohdp+fn/ZxwzPsPj4+7OOGZ9hJKXG73Wx3OS55CI85cBxqzEOYX+zIO3BG4AT0uxRqvuVmG/NC/Ibiruu6l4VqixCcCxxla/ryCME4olJ334A1QnlIa9tFC3kUYDzGl33zKnavu6lB5jvws+n2XM4J4rxn1qCIPTC9my5E+oWrHUFXIRPuz068Fog94wC+jxC4DgKtzlSoaxHf3ezFxRD7jrlQCuN3cuCg+GWS3rU4CYp3X2TyFCdjhhW3XomIuUhV7H+gTj04Xoqqo05T6uTNH7Y4Bww8yIkGaVYrJ7pIKrXKEo1LM1al8CiRB6HqA73f41BTcBI9pdj7o1oxxlyoDrVyFIuIPVAlLljPoUoonoCmdw40b72sPUH07wkrhJqS0KLonaGms5JIXTY5hu1JwBEnkiKntT6yUV5VwsG1UirueKzWIsyFuhzIqePgOSVnJo2g5ltOtjFXINM7R+JcG1zNI0Hx7fMpyATEgUw+cDZYIVSFhD86SgumCc93k9DvVK1cMq0193UPYz8LdQ6mAujWu+COHziMcckR+mwUY5hbRozKitTuHuu/QihzROY1ahBK7RC3x8lg6qjBzgqvOkqmrp3/DM+E6mtRZd0ym0tHkfs+/NmGrvsyLyNwCp6UNqtW4iio9sTmTnlrjaJEXDoeBx28Q5PHCE/ze/+ZULZI27rWlHQxTObSiaFLZH6c1wlFaMoUQgXU1iW7hjkGur+/9Zgf0q3X17qRUITxNxzzYhQP194zoQgyw56b9W6QIKQ8wsKOEXLazGjUV1gt1DvQ1RLSVtlWO2p6TP8LGnI5j6isT/GnhGqKBPvepXS84kervBXmBncRnh//908J9ZexCbUQm1ALsQm1CMA3Bc38y7BEsIsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT txtMobileId'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="501,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="396ff59c-630e-446f-83ad-b1d96ebdae3c" Text="9087742809" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://in.bookmyshow.com/payment/?cid=INTO&amp;cc=INOX&amp;sid=42171&amp;ety=MT&amp;etk=Y&amp;mtk=Y&amp;ec=ET00348725&amp;reload=true" CvElementArea="354, 479, 218, 43" CvTextArea="375, 496, 125, 13" CvTextArgument="Enter mobile number please" CvType="InputBox" DesignTimeRectangle="356, 481, 215, 41" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT txtMobileId'" FullSelectorArgument="&lt;webctrl id='txtMobileId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txtMobileId' tag='INPUT' type='text' class='pay-voucher-input' aaname='' /&gt;" Guid="5e153368-5da1-4346-89ad-362911b7b926" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANsAAAAtCAYAAAAnSB5EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVlSURBVHhe7d1rU9RIFIfxfP8v5SvfeQHvoKLiHRRQuXjD3v2lPGyLwdotQ7C2/k/VqRk66e6TTD/pzAzJDEdHR+3g4KB9+PChvXv3ru3u7ra3b9+2N2/etK2trfb69esxXr16lUgkJqIc4Qtv+MMjPvGKXzwbPHn//n3b29sbV9re3h4rvnz5sj1//rw9e/asPX36dIzNzc1EItFFucETvvCGPzziE6/4xbOBeQoePnzYLl++3C5dupRIJGYIPvGKXzwbTHUMtICdOzs7iURihjDj8YpfPBucW5rymPjp06d2fHzcvn37lkgkfiN4xCde8YtnA+ucYyq0QghhHvjEK37xbPDpiTd1ChkZQpgHPvGKXzwbfFzpU5TIFsK8lGz84tlgivPBSGQLYV5KNn7xbJTNpyaRLYR5Kdn4NcrmG/DIFsL89LLxbJTNN+GRLYR5Kdn4FdlCOEciWwgLEdlCWIjIFsJCRLYQFiKyhbAQkS2EhYhsf/Px48d2+/bt8fEsHjx4MF6DtCRfvnxpd+/ePZd+XebhdQ7LsYhsBo3BfOXKlZNYX1//vvTiOUs2/5l979698dKIyBZ+l8Vk+y+DRv8Gw1JkZgtLcKGyecFv3brVrl+/3q5evTpeeqDvmv0s//z5c1tbWxv/vnnzZjs8PBzLb9y40VZWVn5o83R77vdgPXXJYoYilFyUra6ujperK6v2lJvN9Ktt9VCyTeVT1HbWLC4XbQszueX9vrCt1pWrnDc2Nk5y9/9z1r1z586YZ/Xnrky249GjR+N6tQ/0oT9/9xIp10fth9q2XjbP+377MnVsr1xcaSwfZdpz45qpXMI0i8lWA1Bcu3ZtfFG8oAae5QZ9Pde/ZXj8+HF78uTJmIvcDEjLDAAvdE9f7kpYg9NdjAw4bXvs23NpusFjHQN1f39/rEsMbcnxtGxT+RRy14+62jGwPf+VbNXWixcvxhyIIA/boZ78bIt1rKuO/xi/f//+2IdtsC7p7WPb0qONqW0T2lKv9oG+5UaiOgipo/16vazrZjWe152jTufy9evX772HHq/hhc5s+kI/IJVZBmUlqTCgvMBVr6dvT1/6rAGuHX2UNKhyg0u7lkMbwnqnZZvKpwZX3w9qO/ptE71stZ0erYNa32O/32od9foczHwEqD56tNFvW+272lfadvDr27PMWUaV18GRUK7FchAz61UbfV25mAHDz/yxshkUMHN4geViUJ8+Berpy/U1JZtTy7NmNgO2P/pr47RsU/kUfT+Qi3ZqwJtFnAZ6rq1aDo/qovaFR/n5oEZ/NbOZBW2HXIXBXXXk0KP8VzObcn3U6bD15Vh1bGPNbPp1mikXOZnRpnIJ09hvi8hmgPVHwHrR9YV+sCj3HsCjcqdj6tTRtK/X05efJZtQXkfhOl0y4Aww/f7qPdtUPkXfD+Riuf1IUnW8rzEz/FvZDPTKt96zEcAAl6tZxyxUdeTQo3zq/Wi/rxzY+vdnhCF2vQ9T36lsHSisZ985I5jKJUyziGzh4iBbfxoZLo7I9j8nsv05RLYQFiKyhbAQkS2EhYhsISxEZAthISZly30jQ5ifku3kvpG+4IxsIcxPLxvPcq//EM6Jku3kXv/5FZsQzoeSjV/jr9jk99lCOB9KtpPfZ+t/eTSyhTAfJRu/xl8eddmJ/wiPbCHMS8nGL54NLv1gnV+1VxBCmIfyyiPPBhdQ7u3tjdcoWcDERCLx+8EnXvGLZ4Orll0UqICBpjznmN7U+RTFx5a+JxC+CU8kEv9EucETvtR9WnjEJ17xi2eDq3E9YZ6pzqmklXx64uNKFYVvwBOJxM9RjvCFN/zhEZ94xa+jo6P2FwDM3M29JjqJAAAAAElFTkSuQmCC" InformativeScreenshot="4fdd2284c369a9131b67687fba722f87.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BookMyShow - Secure Payment' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="501,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;BOOKING CONFIRMED&quot;]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG6SURBVDhPpdFLS1tRFAVgS/0DHVUciNSC8QGidaQjR9KxIxEFoUImsTQtVqiCLxAngmjQIgiiA2mptsFJkLYppSiCVK0auCQoRqORYBI1PhLrcu3juTSIRqEbPnLuPnuveyFpyeXJyH5OC9RAD+ipvrpfccFHoDCtUoyyqYoseuzm4kAJyfJ1Z/rXTTU0Tg9JvjBdr6uATrq+fJsx8lCbXlcBnuiHTzj6/uOfb27sNLfCKCzF8dy8WjZyi1RfzhQ2ly3SiK9vIDLxEdEpJ+KbfoQc7xHfCiBgs+M8HIG/ug67DJQ5HfDZDGgxA7atNuzY3+J0ZU0NyZeE+gdxOPMV+8MjiE5+US/RAbVmgPx1KQP2unpwsvQHiQC/6FWT3CXokSw/kUGRKsBXVoGLWAyJYFD1yWW+/bVupAyQc2x2DgfOaTPAagbM6gbCo+MwCp7BW1qOUJ9D9YKt7fDX1KvzmdeH4Ls2OV/QYzOgg37LgOalSsqjbukZ+cUIDQzhbyQKI69YZn6q5eRiM5NeUJFuqeKzO/DyDU4WlyG/fBZ2fX13cbhXLyXL0tf3Ky7kUCO56JduXxWA/4C0S74o0qJsmQGGAAAAAElFTkSuQmCC" InformativeScreenshot="cc24f84ce776c81b70f2c5009c82b684.jpg" Selector="&lt;html app='chrome.exe' title='Movie Tickets, Plays, Sports, Events &amp;amp; Cinemas near Chennai - BookMyShow' /&gt;" Title="New Tab" Url="https://in.bookmyshow.com/explore/home/chennai" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelForEachRowX.Body>
+            </ueab:ExcelForEachRowX>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </Sequence>
+</Activity>
